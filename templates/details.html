@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Upload Rice Image</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="navbar">
+    <a href="{{ url_for('home') }}">Home</a>
+    <a href="{{ url_for('details') }}">Predict</a>
+    <a href="{{ url_for('details') }}#about">About</a>
+    <a href="{{ url_for('home') }}#contact">Contact</a>
+  </div>
+
+  <div class="container">
+    <h1>Upload Your Rice Sample</h1>
+    <form action="/result" method="POST" enctype="multipart/form-data">
+      <label for="image">Select Image:</label><br><br>
+      <input type="file" name="image" id="image" accept="image/*" required><br><br>
+      <button type="submit">Submit for Prediction</button>
+    </form>
+  </div>
+
+  <!-- About Section -->
+  <div class="about-section" id="about">
+    <div class="about-content">
+      <img src="{{ url_for('static', filename='rice-field.jpg') }}" alt="Rice Field" class="about-image">
+      <div class="about-text">
+        <h2>About the Rice Type Classification Model</h2>
+        <p>
+          This model is built using Convolutional Neural Network and trained on labelled images of rice.
+          It takes an image of a rice grain as input and predicts its type.
+        </p>
+
+        <div class="features">
+          <div class="feature-card">
+            <h4>📈 Accuracy of the Model</h4>
+            <p>The model gives the correct prediction 97 times out of 100.</p>
+          </div>
+          <div class="feature-card">
+            <h4>🍚 Different Types of Rice</h4>
+            <p>This model can identify 5 different rice types.</p>
+          </div>
+          <div class="feature-card">
+            <h4>📊 Dataset Used</h4>
+            <p>We trained and tested the model on a labelled dataset of rice images.</p>
+          </div>
+          <div class="feature-card">
+            <h4>🧠 Technical Architecture</h4>
+            <p>The model uses the MobileNetv4 architecture.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
