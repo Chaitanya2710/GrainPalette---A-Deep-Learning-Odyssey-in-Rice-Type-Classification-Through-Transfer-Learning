@@ -1,4 +1,4 @@
-GrainPalette — A Deep Learning Odyssey in Rice Type Classification Through Transfer Learning
+#GrainPalette — A Deep Learning Odyssey in Rice Type Classification Through Transfer Learning
 Overview
 
 GrainPalette is a deep learning-based image classification project designed to automatically identify different rice grain varieties using transfer learning techniques. The solution leverages pre-trained convolutional neural networks (CNNs) to extract visual features and classify input rice grain images into distinct categories with high accuracy. This project was developed as part of an AI/ML internship and includes both model training and a web interface for real-time predictions.
